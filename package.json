@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/f-kubotar/node-sass-brunch",
   "dependencies": {
-    "node-sass": "^1.2.2",
+    "node-sass": "^1.0.1",
     "coffee-script": "~1.6.3"
   },
   "devDependencies": {
