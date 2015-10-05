@@ -10,8 +10,8 @@ describe 'NodeSassCompiler', ->
         data: '.test {\n  border-color: #fff; }\n'
 
       compiler.compile params, (err, out) ->
-        expect(err).not.to.be.ok;
-        expect(out.data).to.equal ".test {\n  border-color: white; }\n"
+        expect(err).not.to.be.ok
+        expect(out.data.toString()).to.equal ".test {\n  border-color: #fff; }\n"
         done()
 
     it 'should compile and compressed', (done) ->
@@ -23,6 +23,6 @@ describe 'NodeSassCompiler', ->
         data: '.test {\n  border-color: #fff; }\n'
 
       compiler.compile params, (err, out) ->
-        expect(err).not.to.be.ok;
-        expect(out.data).to.equal(".test {border-color:#ffffff;}")
+        expect(err).not.to.be.ok
+        expect(out.data.toString()).to.equal(".test{border-color:#fff}\n")
         done()

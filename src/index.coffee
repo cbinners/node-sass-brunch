@@ -14,8 +14,4 @@ module.exports = class NodeSassCompiler
       outputStyle: @nodeSassConfig.outputStyle
       includePaths: @nodeSassConfig.includePaths
       data: params.data
-      error: callback
-      success: (css) ->
-        callback null, data: css
-        
-    
+    , (err, res) -> callback(err, data: res.css)
